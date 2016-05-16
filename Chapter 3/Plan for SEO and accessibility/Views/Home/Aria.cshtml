@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Aria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Aria</h2>
+
+<div role="application">
+    <div id="name" class="name">
+        <h2>Hello</h2>
+        <p>
+            <strong>Instructions:</strong> Insert your name in the box below. An
+            <abbr title="Accessible Rich Internet Application">ARIA</abbr>
+            dialog box will display the result. To start over, press
+            the Try Again button.
+        </p>
+        <p class="input">
+            <label id="name_label" for="name_text">Insert your Name:</label>
+            @*<label id="name_label" >Insert your Name:</label>*@
+            <input type="text" id="name_text" size="3" aria-labelledby="name_label"
+                   aria-invalid="false" />
+            @*<input type="text" id="name_text" size="3"  />*@
+        </p>
+        <p id="name_alert" role="alert" class="feedback"></p>
+        <p class="input">
+            <button type="button" role="heading">Click Me!</button> 
+            <input class="button" id="name_check" type="button"
+                   role="button" aria-pressed="false" value="Check Name" />
+            <input class="button" id="name_again" type="button"
+                   role="button" aria-pressed="false" value="Try Again" />
+        </p>
+    </div>
+</div>

@@ -33,5 +33,24 @@ namespace Plan_for_SEO_and_accessibility.Controllers
 
             return View();
         }
+
+        public ActionResult AriaMvc()
+        {
+            ViewBag.Message = "MVC Aria enabled page";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AriaMvc(Plan_for_SEO_and_accessibility.Models.User user)
+        {
+            ViewBag.Message = "MVC Aria enabled page";
+            if (ModelState.IsValid)
+            { return View(user); }
+            else
+            { return View(); }
+
+        }
+
     }
 }

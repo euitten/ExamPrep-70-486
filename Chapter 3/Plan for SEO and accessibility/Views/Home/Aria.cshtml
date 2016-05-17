@@ -16,15 +16,14 @@
             the Try Again button.
         </p>
         <p class="input">
-            <label id="name_label" for="name_text">Insert your Name:</label>
-            @*<label id="name_label" >Insert your Name:</label>*@
-            <input type="text" id="name_text" size="3" aria-labelledby="name_label"
-                   aria-invalid="false" />
-            @*<input type="text" id="name_text" size="3"  />*@
+            <label for="username">Your username</label>
+            <input type="text" id="username" aria-describedby="username-tip" required />
+            <div role="tooltip" id="username-tip">Your username is your email address</div>
+
         </p>
         <p id="name_alert" role="alert" class="feedback"></p>
         <p class="input">
-            <button type="button" role="heading">Click Me!</button> 
+            <button type="button" role="heading">Click Me!</button>
             <input class="button" id="name_check" type="button"
                    role="button" aria-pressed="false" value="Check Name" />
             <input class="button" id="name_again" type="button"

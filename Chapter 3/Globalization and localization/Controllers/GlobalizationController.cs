@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Plan_for_SEO_and_accessibility.Controllers
 {
-    public class LocalizationController : Controller
+    public class GlobalizationController : Controller
     {
         // GET: Localization
         public ActionResult SimpleLocalization()

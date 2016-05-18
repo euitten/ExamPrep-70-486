@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "SimpleLocalization";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Simple Localization</h2>
+
+@{ 
+    var amount = 10.0m; // Decimal
+    var myDate = new DateTime(2016, 05, 26);
+}
+
+<div>
+    <h3>
+        @amount.ToString("c") @*// format as currency*@
+    </h3>
+</div>
+<div>
+    <h3>
+        @myDate.ToShortDateString()
+    </h3>
+</div>

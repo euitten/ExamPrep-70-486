@@ -26,11 +26,27 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>@Html.ActionLink("Simple globalization", "SimpleGlobalization", "Globalization")</li>
                             <li>@Html.ActionLink("Simple localization", "SimpleLocalization", "Globalization")</li>
+                            <li>@Html.ActionLink("Razor localization", "RazorLocalization", "Globalization")</li>
+                            <li>@Html.ActionLink("Custom globalization", "Index", "CustomGlobalization")</li>
                         </ul>
                     </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">                          
+                            <li>@Html.ActionLink("Deutsch", ViewContext.RouteData.Values["action"].ToString(), new { language = "de" })</li>
+                            <li>@Html.ActionLink("English", ViewContext.RouteData.Values["action"].ToString(), new { language = "en" })</li>
+                            <li>@Html.ActionLink("Français", ViewContext.RouteData.Values["action"].ToString(), new { language = "fr" })</li>
+                            <li>@Html.ActionLink("Nederlands", ViewContext.RouteData.Values["action"].ToString(), new { language = "nl" })</li>
+
+                            @*ViewContext.RouteData.Values["controller"].ToString()*@
+                        </ul>
+                    </li>
                 </ul>
+ 
+
+
             </div>
         </div>
     </div>

@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomGlobalizationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GlobalizationController.cs" />
     <Compile Include="Global.asax.cs">
@@ -127,6 +128,11 @@
     </Compile>
     <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Views\RazorLocalization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RazorLocalization.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Views\SimpleLocalization.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +148,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EmbeddedResource Include="Resources\Views\RazorLocalization.nl.resx" />
+    <EmbeddedResource Include="Resources\Views\RazorLocalization.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RazorLocalization.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Views\SimpleLocalization.en-GB.resx" />
     <EmbeddedResource Include="Resources\Views\SimpleLocalization.en.resx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -172,6 +183,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Globalization\SimpleGlobalization.cshtml" />
     <Content Include="Views\Globalization\SimpleLocalization.cshtml" />
+    <Content Include="Views\Globalization\RazorLocalization.cshtml" />
+    <Content Include="Views\CustomGlobalization\en-GB\Index.cshtml" />
+    <Content Include="Views\CustomGlobalization\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

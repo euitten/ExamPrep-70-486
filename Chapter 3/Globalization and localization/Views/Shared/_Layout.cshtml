@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/modernizr")
+        <script src="~/Scripts/jquery-1.10.2.js"></script>
+   
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -28,6 +31,7 @@
                             <li>@Html.ActionLink("Simple localization", "SimpleLocalization", "Globalization")</li>
                             <li>@Html.ActionLink("Razor localization", "RazorLocalization", "Globalization")</li>
                             <li>@Html.ActionLink("Custom globalization", "Index", "CustomGlobalization")</li>
+                            <li>@Html.ActionLink("JQuery globalization", "GlobalizeWithJQuery", "Globalization")</li>
                         </ul>
                     </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>

@@ -51,6 +51,11 @@ namespace Plan_for_SEO_and_accessibility.Controllers
                 return View();
             }
             
-        }      
+        }
+
+        public ActionResult GlobalizeWithJQuery()
+        {
+            return View();
+        }
     }
 }

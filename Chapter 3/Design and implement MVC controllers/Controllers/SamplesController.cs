@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Design_and_implement_MVC_controllers.Controllers
 {
-  //  [ProfileActionAttribute]
+    //  [ProfileActionAttribute]
     public class SamplesController : Controller
     {
         // GET: Samples
@@ -29,7 +29,7 @@ namespace Design_and_implement_MVC_controllers.Controllers
             return PartialView(model);
         }
         //[HandleError]
-       //  [HandleError(View = "OtherError", ExceptionType = typeof(System.NotImplementedException))]
+        //  [HandleError(View = "OtherError", ExceptionType = typeof(System.NotImplementedException))]
         public ActionResult HandleError()
         {
             // throw new Exception("Fake an error.");
@@ -44,10 +44,43 @@ namespace Design_and_implement_MVC_controllers.Controllers
             return View();
         }
 
+        public ActionResult SampleViewData()
+        {
+            // viewdata is a property on ViewResultBase
+            ViewData["PageName"] = "View Data";
+            return View();
+        }
         [ProfileActionAttribute]
         public ActionResult ProfileActionFilter()
         {
             return View();
+        }
+
+        public FileResult SampleContentType(string contentType)
+        {
+            return File(@"d:\temp\PDF TEST.pdf", "application/PDF");
+        }
+
+        public ActionResult JavaScriptResultSample()
+        {
+            return View();
+            
+        }
+
+        public JavaScriptResult JavaScriptOutput()
+        {
+            return  JavaScript("<script>alert(\"Hello world\")</script>");
+        }
+
+        public RedirectResult RedirectSample()
+        {
+            return new RedirectResult("http://localhost:49504/Player/CreatePlayer", true);
+        }
+
+        public RedirectToRouteResult RedirectToRouteSample()
+        {
+            // return RedirectToAction("");
+            return new RedirectToRouteResult( new System.Web.Routing.RouteValueDictionary(new { action = "xxxxx", controller = "xxxx" }));
         }
 
         protected override void OnException(ExceptionContext filterContext)
@@ -58,13 +91,13 @@ namespace Design_and_implement_MVC_controllers.Controllers
             {
                 return;
             }
-           
+
             filterContext.ExceptionHandled = true;
             Session["ErrorMessage"] = "An exception has occured";
             filterContext.Result = this.RedirectToAction("ShowError", "Samples");
 
 
-             base.OnException(filterContext);
+            base.OnException(filterContext);
         }
     }
 }

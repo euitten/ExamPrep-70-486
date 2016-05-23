@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -174,6 +175,10 @@
     <Content Include="Views\Shared\OtherError.cshtml" />
     <Content Include="Views\Samples\ShowError.cshtml" />
     <Content Include="Views\Samples\ProfileActionFilter.cshtml" />
+    <Content Include="Views\Samples\SampleViewData.cshtml" />
+    <Content Include="Views\Samples\SampleContentType.cshtml" />
+    <Content Include="Views\Samples\JavaScriptResultSample.cshtml" />
+    <Content Include="Views\Player\EditPlayer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

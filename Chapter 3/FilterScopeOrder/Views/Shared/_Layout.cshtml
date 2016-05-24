@@ -23,25 +23,6 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Player<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("Create", "CreatePlayer", "Player")</li>    
-                            <li>@Html.ActionLink("Edit", "EditPlayer", "Player")</li>                         
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Samples<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("ChildActionOnly", "Index", "Samples")</li>
-                            <li>@Html.ActionLink("HandleError", "HandleError", "Samples")</li>
-                            <li>@Html.ActionLink("Custom action filter", "ProfileActionFilter","Samples")</li>
-                            <li>@Html.ActionLink("ViewData", "SampleViewData", "Samples")</li>
-                            <li>@Html.ActionLink("ContentType", "SampleContentType", "Samples")</li>
-                            @*<li>@Html.ActionLink("JavaScriptResult", "JavaScriptResultSample","Samples")</li>*@
-                            <li>@Html.ActionLink("Redirection", "RedirectSample", "Samples")</li>                            
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>

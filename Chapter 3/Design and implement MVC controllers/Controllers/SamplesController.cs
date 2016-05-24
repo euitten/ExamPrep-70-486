@@ -64,12 +64,12 @@ namespace Design_and_implement_MVC_controllers.Controllers
         public ActionResult JavaScriptResultSample()
         {
             return View();
-            
+
         }
 
         public JavaScriptResult JavaScriptOutput()
         {
-            return  JavaScript("<script>alert(\"Hello world\")</script>");
+            return JavaScript("<script>alert(\"Hello world\")</script>");
         }
 
         public RedirectResult RedirectSample()
@@ -80,7 +80,7 @@ namespace Design_and_implement_MVC_controllers.Controllers
         public RedirectToRouteResult RedirectToRouteSample()
         {
             // return RedirectToAction("");
-            return new RedirectToRouteResult( new System.Web.Routing.RouteValueDictionary(new { action = "xxxxx", controller = "xxxx" }));
+            return new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary(new { action = "xxxxx", controller = "xxxx" }));
         }
 
         protected override void OnException(ExceptionContext filterContext)

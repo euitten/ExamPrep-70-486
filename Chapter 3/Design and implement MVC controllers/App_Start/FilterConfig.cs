@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Design_and_implement_MVC_controllers.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Design_and_implement_MVC_controllers
@@ -7,7 +8,8 @@ namespace Design_and_implement_MVC_controllers
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-          //   filters.Add(new HandleErrorAttribute());
+            //   filters.Add(new HandleErrorAttribute());
+
         }
     }
 }

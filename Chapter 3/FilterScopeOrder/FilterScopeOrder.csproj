@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2E519D90-895E-481D-9BCF-2B5E79F6051B}</ProjectGuid>
+    <ProjectGuid>{403F4246-3098-4724-BF2F-7C0ECFC65633}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Design_and_implement_MVC_controllers</RootNamespace>
-    <AssemblyName>Design and implement MVC controllers</AssemblyName>
+    <RootNamespace>FilterScopeOrder</RootNamespace>
+    <AssemblyName>FilterScopeOrder</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -51,7 +51,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -122,13 +121,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlayerController.cs" />
-    <Compile Include="Controllers\SamplesController.cs" />
-    <Compile Include="Filters\ProfileActionAttribute.cs" />
+    <Compile Include="Filters\Filters.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -152,9 +148,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -168,22 +162,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Player\CreatePlayer.cshtml" />
-    <Content Include="Views\Samples\Index.cshtml" />
-    <Content Include="Views\Samples\MyDateTime.cshtml" />
-    <Content Include="Views\Samples\HandleError.cshtml" />
-    <Content Include="Views\Shared\OtherError.cshtml" />
-    <Content Include="Views\Samples\ShowError.cshtml" />
-    <Content Include="Views\Samples\ProfileActionFilter.cshtml" />
-    <Content Include="Views\Samples\SampleViewData.cshtml" />
-    <Content Include="Views\Samples\SampleContentType.cshtml" />
-    <Content Include="Views\Samples\JavaScriptResultSample.cshtml" />
-    <Content Include="Views\Player\EditPlayer.cshtml" />
-    <Content Include="Views\Samples\FilterOrder.cshtml" />
-    <Content Include="Views\Samples\ForewardFilterOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -209,9 +191,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>65321</DevelopmentServerPort>
+          <DevelopmentServerPort>62908</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49504/</IISUrl>
+          <IISUrl>http://localhost:62908/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

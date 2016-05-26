@@ -19,7 +19,7 @@ namespace Design_and_implement_MVC_controllers.Controllers
             return View(model);
         }
 
-        //[ChildActionOnly]
+        [ChildActionOnly]
         public PartialViewResult MyDateTime()
         {
             ViewBag.Message = "This is from myDateTime()";
@@ -50,6 +50,7 @@ namespace Design_and_implement_MVC_controllers.Controllers
             ViewData["PageName"] = "View Data";
             return View();
         }
+
         [ProfileActionAttribute]
         public ActionResult ProfileActionFilter()
         {
@@ -79,25 +80,24 @@ namespace Design_and_implement_MVC_controllers.Controllers
 
         public RedirectToRouteResult RedirectToRouteSample()
         {
-            // return RedirectToAction("");
             return new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary(new { action = "xxxxx", controller = "xxxx" }));
         }
 
-        protected override void OnException(ExceptionContext filterContext)
-        {
-            // Do some exception logging ....
+        //protected override void OnException(ExceptionContext filterContext)
+        //{
+        //    // Do some exception logging ....
 
-            if (filterContext.ExceptionHandled)
-            {
-                return;
-            }
+        //    if (filterContext.ExceptionHandled)
+        //    {
+        //        return;
+        //    }
 
-            filterContext.ExceptionHandled = true;
-            Session["ErrorMessage"] = "An exception has occured";
-            filterContext.Result = this.RedirectToAction("ShowError", "Samples");
+        //    filterContext.ExceptionHandled = true;
+        //    Session["ErrorMessage"] = "An exception has occured";
+        //    filterContext.Result = this.RedirectToAction("ShowError", "Samples");
 
 
-            base.OnException(filterContext);
-        }
+        //    base.OnException(filterContext);
+        //}
     }
 }

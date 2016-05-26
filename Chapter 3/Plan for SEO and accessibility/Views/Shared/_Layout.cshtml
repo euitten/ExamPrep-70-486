@@ -11,7 +11,10 @@
 <body>
     <script>
         function test()
-        { };
+        {
+            var x = 1;
+            var s = "This is a text in a function"
+        };
 
     </script>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -26,16 +29,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li role=menuitem>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">ARIA<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li>@Html.ActionLink("Plain Aria", "Aria", "Home")</li>
-                            <li>@Html.ActionLink("MVC Aria", "AriaMvc", "Home")</li>
+                            <li role=menuitem>@Html.ActionLink("Plain Aria", "Aria", "Home")</li>
+                            <li role=menuitem>@Html.ActionLink("MVC Aria", "AriaMvc", "Home")</li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li role=menuitem>@Html.ActionLink("About", "About", "Home")</li>
+                    <li role=menuitem>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>

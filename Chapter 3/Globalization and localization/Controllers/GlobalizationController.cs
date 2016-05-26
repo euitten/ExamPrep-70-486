@@ -17,6 +17,8 @@ namespace Plan_for_SEO_and_accessibility.Controllers
 
         public ActionResult SimpleGlobalization()
         {
+            ViewData["CurrentUICulture"] = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+            ViewData["CurrentCulture"] =  System.Threading.Thread.CurrentThread.CurrentCulture.Name;
             return View();
         }
 
@@ -27,7 +29,7 @@ namespace Plan_for_SEO_and_accessibility.Controllers
 
         public ActionResult RazorLocalization(string language)
         {
-            if(language != null)
+            if (language != null)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
                 System.Threading.Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
@@ -43,14 +45,14 @@ namespace Plan_for_SEO_and_accessibility.Controllers
         [HttpPost]
         public ActionResult RazorLocalization(Globalization_and_localization.Models.Player player)
         {
-           if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 return View(player);
             }
             else {
                 return View();
             }
-            
+
         }
 
         public ActionResult GlobalizeWithJQuery()

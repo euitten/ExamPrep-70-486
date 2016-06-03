@@ -146,6 +146,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Resources\Icon1.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EmbeddedResource Include="Resources\Views\RazorLocalization.nl.resx" />
@@ -153,6 +154,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RazorLocalization.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\SimpleLocalization.nl-BE.resx" />
     <EmbeddedResource Include="Resources\Views\SimpleLocalization.en-GB.resx" />
     <EmbeddedResource Include="Resources\Views\SimpleLocalization.en.resx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

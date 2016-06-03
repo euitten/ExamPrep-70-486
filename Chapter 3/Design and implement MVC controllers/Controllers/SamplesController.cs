@@ -28,13 +28,15 @@ namespace Design_and_implement_MVC_controllers.Controllers
 
             return PartialView(model);
         }
-        //[HandleError]
-        //  [HandleError(View = "OtherError", ExceptionType = typeof(System.NotImplementedException))]
+
+
+        // [HandleError]
+        //[HandleError(View = "OtherError", ExceptionType = typeof(System.NotImplementedException))]
         public ActionResult HandleError()
         {
             // throw new Exception("Fake an error.");
-            // throw new NotImplementedException("Not yet implemented.");
-            throw new ArgumentNullException("Test");
+            throw new NotImplementedException("Not yet implemented.");
+           //  throw new ArgumentNullException("Test");
             return View();
         }
 
@@ -70,7 +72,7 @@ namespace Design_and_implement_MVC_controllers.Controllers
 
         public JavaScriptResult JavaScriptOutput()
         {
-            return JavaScript("<script>alert(\"Hello world\")</script>");
+            return JavaScript("alert(\"Hello world\")");
         }
 
         public RedirectResult RedirectSample()
@@ -83,21 +85,21 @@ namespace Design_and_implement_MVC_controllers.Controllers
             return new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary(new { action = "xxxxx", controller = "xxxx" }));
         }
 
-        //protected override void OnException(ExceptionContext filterContext)
-        //{
-        //    // Do some exception logging ....
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            // Do some exception logging ....
 
-        //    if (filterContext.ExceptionHandled)
-        //    {
-        //        return;
-        //    }
+            if (filterContext.ExceptionHandled)
+            {
+                return;
+            }
 
-        //    filterContext.ExceptionHandled = true;
-        //    Session["ErrorMessage"] = "An exception has occured";
-        //    filterContext.Result = this.RedirectToAction("ShowError", "Samples");
+            filterContext.ExceptionHandled = true;
+            Session["ErrorMessage"] = "An exception has occured";
+            filterContext.Result = this.RedirectToAction("ShowError", "Samples");
 
 
-        //    base.OnException(filterContext);
-        //}
+            base.OnException(filterContext);
+        }
     }
 }

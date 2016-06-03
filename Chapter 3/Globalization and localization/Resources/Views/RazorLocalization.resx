@@ -127,7 +127,7 @@
     <value>Last name</value>
   </data>
   <data name="LastNameRequired" xml:space="preserve">
-    <value>The last name is a required field.</value>
+    <value>The last name  {0} is a required field.</value>
   </data>
   <data name="Rating" xml:space="preserve">
     <value>Rating</value>

@@ -15,16 +15,17 @@
             @Html.LabelFor(model => model.FirstName)
         </div>
         <div class="editor-field">
-            @Html.TextBoxFor(model => model.FirstName)
-            @*@Html.TextBoxFor(model => model.FirstName, new { aria_required = true })*@
-            @*@Html.AriaTextBoxFor(model => model.FirstName)*@
+            @*@Html.TextBoxFor(model => model.FirstName)*@
+            @Html.TextBoxFor(model => model.FirstName, new { aria_required = true })
+            
             @Html.ValidationMessageFor(model => model.FirstName)
         </div>
         <div class="editor-label">
             @Html.LabelFor(model => model.LastName)
         </div>
         <div class="editor-field">
-            @Html.TextBoxFor(model => model.LastName)
+            @*@Html.TextBoxFor(model => model.LastName)*@
+            @Html.AriaTextBoxFor(model => model.FirstName)
             @Html.ValidationMessageFor(model => model.LastName)
         </div>
         <input type="submit" value="Create" />

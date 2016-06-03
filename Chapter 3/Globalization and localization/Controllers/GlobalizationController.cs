@@ -12,6 +12,9 @@ namespace Plan_for_SEO_and_accessibility.Controllers
         // GET: Localization
         public ActionResult SimpleLocalization()
         {
+
+            ViewData["CurrentUICulture"] = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+            ViewData["CurrentCulture"] = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
             return View();
         }
 
@@ -29,6 +32,7 @@ namespace Plan_for_SEO_and_accessibility.Controllers
 
         public ActionResult RazorLocalization(string language)
         {
+
             if (language != null)
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
@@ -38,6 +42,9 @@ namespace Plan_for_SEO_and_accessibility.Controllers
                 cookie.Value = language;
                 Response.Cookies.Add(cookie);
             }
+
+            ViewData["CurrentUICulture"] = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
+            ViewData["CurrentCulture"] = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
 
             return View();
         }

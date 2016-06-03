@@ -10,7 +10,7 @@ namespace FilterScopeOrder
         {
             filters.Add(new HandleErrorAttribute());
 
-            GlobalFilters.Filters.Add(new AuthorizationFilterA() { Order = 2 });
+            GlobalFilters.Filters.Add(new AuthorizationFilterA() { Order = 1 });
             GlobalFilters.Filters.Add(new AuthorizationFilterC());
 
         }

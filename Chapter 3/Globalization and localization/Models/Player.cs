@@ -10,6 +10,6 @@ namespace Globalization_and_localization.Models
         [Required(ErrorMessageResourceType = typeof(Globalization_and_localization.Resources.Views.RazorLocalization), ErrorMessageResourceName = "LastNameRequired")]
         [Display(ResourceType = typeof(Globalization_and_localization.Resources.Views.RazorLocalization), Name ="LastName" )]
         public string LastName { get; set; }
-        public int Ranking { get; set; }
+        public int Ranking { get; set; } // standaard validatie omdat integer is. Geen validatie wanneer string.
     }
 }

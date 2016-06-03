@@ -57,6 +57,12 @@ namespace Design_and_implement_MVC_controllers.Controllers
         public ActionResult CreatePlayer(Player player)
         {
             return View(player);
+            // return DisplayPlayer(player);
+        }
+
+        public ActionResult DisplayPlayer(Player player)
+        {
+            return View("DisplayPlayer", player);
         }
     }
 }

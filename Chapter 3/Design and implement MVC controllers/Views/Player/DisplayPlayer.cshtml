@@ -1,13 +1,13 @@
-﻿@model Globalization_and_localization.Models.Player
+﻿@model Design_and_implement_MVC_controllers.Models.Player
 
 @{
-    ViewBag.Title = "RazorLocalization";
+    ViewBag.Title = "CreatePlayerView";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Razor Localization</h2>
-<h3>CurrentUICulture @ViewData["CurrentUICulture"]</h3>
-<h3>CurrentCulture @ViewData["CurrentCulture"]</h3>
+<h2>CreatePlayerView</h2>
+
+
 
 @using (Html.BeginForm()) 
 {
@@ -41,6 +41,14 @@
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.Remarks, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+              @*@Model.Remarks*@
+                @Html.Raw(Model.Remarks)
+                @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+            </div>
+        </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />

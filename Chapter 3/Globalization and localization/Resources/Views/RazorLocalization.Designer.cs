@@ -88,7 +88,7 @@ namespace Globalization_and_localization.Resources.Views {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The last name is a required field..
+        ///   Looks up a localized string similar to The last name  {0} is a required field..
         /// </summary>
         public static string LastNameRequired {
             get {
